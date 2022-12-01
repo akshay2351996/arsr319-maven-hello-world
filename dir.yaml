@@ -1,0 +1,14 @@
+- name: create directory
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+         path: /home/ansible/ram
+         state: directory
+         mode: '0755'
+    - name: Copy file with owner and permissions
+      ansible.builtin.copy:
+         src: /var/lib/jenkins/workspace/ansibleplaybook/folder
+         dest: /home/ansible/
+         mode: '0644'
