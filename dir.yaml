@@ -9,6 +9,6 @@
          mode: '0755'
     - name: Copy file with owner and permissions
       ansible.builtin.copy:
-         src: /var/lib/jenkins/workspace/ansibleplaybook/folder
+         src: /var/lib/jenkins/workspace/project1/my-app
          dest: /home/ansible/
          mode: '0644'
